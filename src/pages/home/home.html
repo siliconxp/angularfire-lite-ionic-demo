@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <br>
+  <h1>AngularFire Lite Realtime Database</h1>
+  <br>
+
+  <span style="color:crimson">realtime database </span><h4>{{databaseData}}</h4>
+  <span style="color:crimson">realtime database list of data</span>
+  <ul>
+    <li *ngFor="let item of databaseList | async">{{item}}</li>
+  </ul>
+
+  <span style="color:crimson">realtime database query</span><h4>{{databaseQuery}}</h4>
+
+
+  <br>
+  <h1>AngularFire Lite Firestore</h1>
+  <br>
+
+  <span style="color:crimson">firestore database</span><h4>{{firestoreData?.hellofield }}</h4>
+  <span style="color:crimson">firebase database list of data</span>
+  <ul>
+    <li *ngFor="let doc of firestoreList | async">{{doc | json}}</li>
+  </ul>
+  <span style="color:crimson">firestore query</span><h4 *ngFor="let query of firestoreQuery">{{query?.data1}}</h4>
+
+  <span style="color:crimson">Transactions and Batched Writes</span><br><h4>open the dev console to see them in action</h4>
+  <br>
+  <br>
+
+  <span>I am logged in?</span><h4>{{ authState }}</h4>
+
+  <button (click)="login()">login</button>
+
+</ion-content>

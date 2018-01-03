@@ -1,0 +1,8 @@
+{
+  "name": "angularfire-lite-ionic-demo",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
